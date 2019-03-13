@@ -12,4 +12,11 @@ export class Color2HexComponent implements OnInit {
   ngOnInit() {
   }
 
+  colpick = "";
+  result = "#000000";
+
+  calcHex = () => {
+    this.result = this.colpick;
+  }
+
 }

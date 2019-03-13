@@ -1,3 +1,9 @@
-<p>
-  color2-hex works!
-</p>
+<div>
+    <h2>Color 2 Hex!</h2>
+
+    <input type="color" [(ngModel)]='colpick' />
+    <button (click)='calcHex()'>Convert!</button>
+
+    <br />
+    <span>{{result}}</span>
+</div>
