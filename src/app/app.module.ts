@@ -23,7 +23,8 @@ import { MatCardModule
         , MatCheckboxModule 
         , MatFormFieldModule
         , MatInputModule} from '@angular/material';
-import { FlexLayoutModule} from '@angular/flex-layout';        
+import { FlexLayoutModule} from '@angular/flex-layout';
+import { Color2HexComponent } from './color2-hex/color2-hex.component';        
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { FlexLayoutModule} from '@angular/flex-layout';
     AvueMultiplyingComponent,
     SomethingComponent,
     DancingManComponent,
-    TjsSubtractComponent
+    TjsSubtractComponent,
+    Color2HexComponent
   ],
   imports: [
     BrowserModule
