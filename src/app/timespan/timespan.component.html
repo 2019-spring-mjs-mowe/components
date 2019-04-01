@@ -1,7 +1,17 @@
-<div>
-    <h2>Tiresa's Age Calculator</h2>
-    <div>Starting Date<input type="date" [(ngModel)]="startingDate"></div>
-    <div>Ending Date<input type="date" [(ngModel)]="endingDate"></div>
-    <button type="button" (click)="calculateAge()">Calculate Age</button>
-    <div>Outcome: {{age}}</div>
-</div>
+<mat-card>
+    <mat-card-title>Tiresa's Age Calculator</mat-card-title>
+    <mat-card-content>
+        <mat-form-field>
+                <input matInput [matDatepicker]="dateOne" placeholder="Starting Date" [(ngModel)]="startingDate">
+                <mat-datepicker-toggle matSuffix [for]="dateOne"></mat-datepicker-toggle>
+                <mat-datepicker #dateOne></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+                <input matInput [matDatepicker]="dateTwo" placeholder="Ending Date" [(ngModel)]="endingDate">
+                <mat-datepicker-toggle matSuffix [for]="dateTwo"></mat-datepicker-toggle>
+                <mat-datepicker #dateTwo></mat-datepicker>
+        </mat-form-field>
+        <button mat-button (click)="calculateAge()">Calculate Age</button>
+        <div>Outcome: {{age}}</div>
+    </mat-card-content>
+</mat-card>
