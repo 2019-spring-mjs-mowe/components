@@ -1,19 +1,37 @@
-<div style="background:grey">
-    <h2 style="color:turquoise">This is Math!</h2>
-    <!-- <p *ngFor='let v of addEqual'> -->
-        <input type="number" [(ngModel)]='numberOne'> + 
-        <input type="number" [(ngModel)]='numberTwo'> 
-        <button (click)='addEqual()'>=</button> 
-        <span>{{ totalNumbers }}</span>
-    <!-- </p> [(ngModel)]='totalNumbers' -->
+<mat-card style="background-color:cornflowerblue">
+    <mat-card-title style="color:aliceblue">This is Math!</mat-card-title>
+        <mat-form-field >
+            <input matInput
+                style="background-color:white"
+                placeholder="Number 1" 
+                type="number" 
+                [(ngModel)]='numberOne'>
+        </mat-form-field>
+            <span style="font-weight: 900">+</span>
+        <mat-form-field>
+            <input matInput 
+                style="background-color:white"
+                placeholder="Number 2" 
+                type="number" 
+                [(ngModel)]='numberTwo'> 
+        </mat-form-field>
+        <button mat-raised-button color="warn" (click)='addEqual()'>=</button> 
+        <span style="font-weight: 900">{{ totalNumbers }}</span>
     <br>
-    <input type="number" [(ngModel)]='squNumber'> √2
-        <!-- <input type="number" [(ngModel)]='numberTwo'>  -->
-        <button (click)='squareEqual()'>=</button> 
-        <span>{{ squTotal }}</span>
+    <mat-form-field>
+        <input style="background-color:white" matInput type="number" [(ngModel)]='squNumber'>
+    </mat-form-field>
+     <span style="font-weight: 900">√2</span>
+        <button mat-raised-button color="warn" (click)='squareEqual()'>=</button> 
+        <span style="font-weight: 900">{{ squTotal }}</span>
     <br>
-    <input type="number" [(ngModel)]='powOne'> ^
-        <input type="number" [(ngModel)]='powTwo'> 
-        <button (click)='powerEqual()'>=</button> 
-        <span>{{ powTotal }}</span>
-</div>
+    <mat-form-field>
+        <input matInput style="background-color:white" type="number" [(ngModel)]='powOne'>
+    </mat-form-field>
+        <span style="font-weight: 900">^</span>
+    <mat-form-field>
+            <input matInput style="background-color:white" type="number" [(ngModel)]='powTwo'>
+    </mat-form-field> 
+    <button mat-raised-button color="warn" (click)='powerEqual()'>=</button> 
+    <span style="font-weight: 900">{{ powTotal }}</span>
+</mat-card>

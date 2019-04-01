@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { cleanSession } from 'selenium-webdriver/safari';
+import { CLEANUP } from '@angular/core/src/render3/interfaces/view';
 
 @Component({
   selector: 'app-awesome-component',
@@ -11,11 +13,17 @@ export class AwesomeComponentComponent implements OnInit {
 
   ngOnInit() {
   }
-
   message = "";
   
   generateMessage = () => {
     this.message = 'Ow!';
+    this.reset();
+    
   }
-
+  reset = () => {
+    this.removeMessage();
+  }
+  removeMessage = () => {
+    setTimeout(()=>{ this.message = "" }, 1500)
+  }
 }

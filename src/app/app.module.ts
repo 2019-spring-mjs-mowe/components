@@ -25,6 +25,8 @@ import { MatCardModule
         , MatInputModule
         , MatDatepickerModule
         , MatNativeDateModule} from '@angular/material';
+        , MatOptionModule
+        , MatSelectModule} from '@angular/material';
 import { FlexLayoutModule} from '@angular/flex-layout';        
 
 @NgModule({
@@ -54,6 +56,8 @@ import { FlexLayoutModule} from '@angular/flex-layout';
     , MatCheckboxModule
     , MatFormFieldModule
     , MatInputModule
+    , MatOptionModule
+    , MatSelectModule
     , FlexLayoutModule
     , MatDatepickerModule
     , MatNativeDateModule
