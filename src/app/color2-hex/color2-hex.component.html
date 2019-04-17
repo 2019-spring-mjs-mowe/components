@@ -1,9 +1,13 @@
-<div>
-    <h2>Color 2 Hex!</h2>
+<mat-card>
+    <mat-card-title>Color 2 Hex!</mat-card-title>
 
-    <input type="color" [(ngModel)]='colpick' />
-    <button (click)='calcHex()'>Convert!</button>
+    <mat-form-field>
+        <input matInput type="color" [(ngModel)]='colpick' />
+    </mat-form-field>
+
+    <button mat-raised-button (click)='calcHex()'>Convert!</button>
 
     <br />
+
     <span>{{result}}</span>
-</div>
+</mat-card>
